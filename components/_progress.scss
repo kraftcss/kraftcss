@@ -1,0 +1,44 @@
+
+/*
+|--------------------------------------------------------------------------
+| components / progress
+|--------------------------------------------------------------------------
+|
+| Progress component.
+|
+*/
+
+
+$kraft-progress-height: $kraft-global-spacing-unit !default;
+$kraft-progress-bg-color: #eee !default;
+$kraft-progress-bar-bg-color: #ccc !default;
+
+
+.c-progress {
+  display: flex;
+  height: $kraft-progress-height;
+  overflow: hidden;
+  background-color: $kraft-progress-bg-color;
+
+
+  &--inset { box-shadow: inset 0 2px 1px 0 darken($kraft-progress-bg-color, 10%); }
+}
+
+
+  .c-progress__bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $kraft-progress-bar-bg-color;
+
+
+    .c-progress--positive & { background-color: $kraft-positive-color; }
+    .c-progress--negative & { background-color: $kraft-negative-color; }
+    .c-progress--info & { background-color: $kraft-info-color; }
+    .c-progress--warning & { background-color: $kraft-warning-color; }
+  }
+
+
+.c-progress--round {
+  &, .c-progress__bar { border-radius: $kraft-global-round; }
+}
