@@ -1,0 +1,26 @@
+
+/*
+|--------------------------------------------------------------------------
+| components / card
+|--------------------------------------------------------------------------
+|
+| Cards baby
+|
+*/
+
+
+$kraft-card-background: #fff !default;
+$kraft-card-border: 1px solid #ccc !default;
+
+
+
+.c-card {
+  background: $kraft-card-background;
+  padding: $kraft-global-spacing-unit;
+  border: $kraft-card-border;
+}
+
+
+  .c-card__header {
+    display: flex;
+  }

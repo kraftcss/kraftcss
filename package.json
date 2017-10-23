@@ -1,0 +1,38 @@
+{
+  "name": "@kraftcss/kraftcss",
+  "version": "0.0.1",
+  "description": "BEMIT SASS Framework",
+  "main": "kraft.scss",
+  "scripts": {
+    "lint": "stylelint \"**/*.scss\" --syntax scss",
+    "test": "npm run lint && npm run build",
+    "build": "node ./scripts/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kraftcss/framework.git"
+  },
+  "author": "Sean Tymon <tymon148@gmail.com>",
+  "contributors": [
+    "John Perry"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kraftcss/framework/issues"
+  },
+  "homepage": "https://github.com/kraftcss/framework#readme",
+  "dependencies": {
+    "@kraftcss/framework": "^0.1.0",
+    "sass-mq": "^3.3.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "fs-extra": "^3.0.1",
+    "node-sass": "^4.5.3",
+    "node-sass-import": "^1.1.1",
+    "postcss": "^6.0.13",
+    "postcss-csso": "^3.0.0",
+    "stylelint": "^7.13.0",
+    "stylelint-scss": "^1.5.1"
+  }
+}

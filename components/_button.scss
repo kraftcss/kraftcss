@@ -1,0 +1,60 @@
+
+/*
+|--------------------------------------------------------------------------
+| components / button
+|--------------------------------------------------------------------------
+|
+| We all need buttons.
+|
+*/
+
+
+$kraft-default-ratio: 5% !default;
+
+
+@mixin kraft-button-states($color, $ratio: $kraft-default-ratio) {
+  background-color: $color;
+
+  &:hover {
+    background-color: lighten($color, $ratio);
+  }
+
+  &:active,
+  &:focus {
+    background-color: darken($color, $ratio);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: desaturate(lighten($color, $ratio*3), $ratio*4);
+  }
+}
+
+
+
+
+.c-btn {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+  overflow: visible;
+  padding: .75em 1.25em;
+  text-decoration: none;
+  transition: all 50ms linear;
+  color: #fff;
+
+  @include kraft-button-states($kraft-default-color);
+
+
+  &--small { font-size: #{$kraft-spacing-factor--small}em; }
+  &--large { font-size: #{$kraft-spacing-factor--large}em; }
+
+
+  &--positive { @include kraft-button-states($kraft-positive-color); }
+  &--negative { @include kraft-button-states($kraft-negative-color); }
+  &--info { @include kraft-button-states($kraft-info-color); }
+  &--warning { @include kraft-button-states($kraft-warning-color); }
+}

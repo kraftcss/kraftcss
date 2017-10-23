@@ -1,0 +1,75 @@
+
+/*
+|--------------------------------------------------------------------------
+| components / alert
+|--------------------------------------------------------------------------
+|
+| For important things
+|
+| <div class="c-alert c-alert--positive">
+|   <div class="c-alert__icon"></div>
+|   <div class="c-alert__body">
+|     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+|   </div>
+|   <div class="c-alert__close">&times;</div>
+| </div>
+|
+*/
+
+
+$kraft-alert-icon-background: rgba(#000, .2);
+
+
+.c-alert {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+  background-color: $kraft-default-color;
+
+  &--positive { background-color: $kraft-positive-color; }
+  &--negative { background-color: $kraft-negative-color; }
+  &--info { background-color: $kraft-info-color; }
+  &--warning { background-color: $kraft-warning-color; }
+}
+
+  .c-alert__body,
+  .c-alert__icon,
+  .c-alert__close {
+    display: inherit;
+    align-items: center;
+    padding: $kraft-global-spacing-unit;
+  }
+
+  .c-alert__body {
+    width: 100%;
+  }
+
+  .c-alert__icon {
+    background-color: $kraft-alert-icon-background;
+  }
+
+  .c-alert__close {
+    cursor: pointer;
+
+    &--top { align-self: top; }
+  }
+
+
+.c-alert--small {
+
+  .c-alert__body,
+  .c-alert__icon,
+  .c-alert__close {
+    padding: $kraft-global-spacing-unit--small;
+  }
+}
+
+.c-alert--large {
+
+  .c-alert__body,
+  .c-alert__icon,
+  .c-alert__close {
+    padding: $kraft-global-spacing-unit--large;
+  }
+}

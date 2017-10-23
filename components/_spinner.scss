@@ -1,0 +1,53 @@
+
+/*
+|--------------------------------------------------------------------------
+| components / spinner
+|--------------------------------------------------------------------------
+|
+| CSS only spinner.
+|
+*/
+
+
+$kraft-spinner-stroke-size: 4px !default;
+$kraft-spinner-speed: .7s !default;
+
+
+
+.c-spinner {
+  display: inline-block;
+  width: $kraft-global-spacing-unit;
+  height: $kraft-global-spacing-unit;
+  animation: rotate $kraft-spinner-speed infinite linear;
+  border: $kraft-spinner-stroke-size solid $kraft-default-color;
+  border-radius: $kraft-global-round;
+  overflow: hidden;
+  text-indent: -9999px;
+  vertical-align: middle;
+
+  &--positive { border-color: $kraft-positive-color; }
+  &--negative { border-color: $kraft-negative-color; }
+  &--info { border-color: $kraft-info-color; }
+  &--warning { border-color: $kraft-warning-color; }
+
+  &,
+  &--info,
+  &--positive,
+  &--negative,
+  &--warning {
+    border-right-color: transparent;
+  }
+}
+
+
+
+@keyframes rotate {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
