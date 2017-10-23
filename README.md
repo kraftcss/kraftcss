@@ -1,13 +1,13 @@
-# kraftcss framework
+# kraftcss
 
-Flexified fork of [inuitcss](https://github.com/inuitcss/inuitcss)
+Kraft CSS Framework
 
 
-[![Travis](https://img.shields.io/travis/kraftcss/framework.svg?style=flat-square)](https://travis-ci.org/kraftcss/framework)
-[![npm (scoped)](https://img.shields.io/npm/v/@kraftcss/framework.svg?style=flat-square)](https://www.npmjs.com/package/@kraftcss/framework)
+[![Travis](https://img.shields.io/travis/kraftcss/kraftcss.svg?style=flat-square)](https://travis-ci.org/kraftcss/kraftcss)
+[![npm (scoped)](https://img.shields.io/npm/v/@kraftcss/kraftcss.svg?style=flat-square)](https://www.npmjs.com/package/@kraftcss/kraftcss)
 
 ## Installation
 
 ```
-yarn add @kraftcss/framework
+yarn add @kraftcss/kraftcss
 ```
