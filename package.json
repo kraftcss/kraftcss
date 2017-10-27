@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/kraftcss/framework#readme",
   "dependencies": {
-    "@kraftcss/framework": "^0.1.0",
+    "@kraftcss/framework": "^0.1.1",
     "sass-mq": "^3.3.2"
   },
   "devDependencies": {

@@ -9,19 +9,23 @@
 */
 
 
-$kraft-progress-height: $kraft-global-spacing-unit !default;
 $kraft-progress-bg-color: #eee !default;
 $kraft-progress-bar-bg-color: #ccc !default;
 
 
 .c-progress {
   display: flex;
-  height: $kraft-progress-height;
+  height: $kraft-global-spacing-unit;
   overflow: hidden;
   background-color: $kraft-progress-bg-color;
 
 
   &--inset { box-shadow: inset 0 2px 1px 0 darken($kraft-progress-bg-color, 10%); }
+
+  &--tiny { height: $kraft-global-spacing-unit--tiny; }
+  &--small { height: $kraft-global-spacing-unit--small; }
+  &--large { height: $kraft-global-spacing-unit--large; }
+  &--huge { height: $kraft-global-spacing-unit--huge; }
 }
 
 
@@ -32,10 +36,25 @@ $kraft-progress-bar-bg-color: #ccc !default;
     background-color: $kraft-progress-bar-bg-color;
 
 
-    .c-progress--positive & { background-color: $kraft-positive-color; }
-    .c-progress--negative & { background-color: $kraft-negative-color; }
-    .c-progress--info & { background-color: $kraft-info-color; }
-    .c-progress--warning & { background-color: $kraft-warning-color; }
+    .c-progress--positive & {
+      background-color: $kraft-positive-color;
+      color: kraft-color-yiq($kraft-positive-color);
+    }
+
+    .c-progress--negative & {
+      background-color: $kraft-negative-color;
+      color: kraft-color-yiq($kraft-negative-color);
+    }
+
+    .c-progress--info & {
+      background-color: $kraft-info-color;
+      color: kraft-color-yiq($kraft-info-color);
+    }
+
+    .c-progress--warning & {
+      background-color: $kraft-warning-color;
+      color: kraft-color-yiq($kraft-warning-color);
+    }
   }
 
 
