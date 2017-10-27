@@ -14,6 +14,7 @@ $kraft-default-ratio: 5% !default;
 
 @mixin kraft-button-states($color, $ratio: $kraft-default-ratio) {
   background-color: $color;
+  outline-color: $color;
 
   &:hover {
     background-color: lighten($color, $ratio);
